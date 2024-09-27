@@ -1,9 +1,9 @@
 import { getAllPosts } from '@/lib/api';
 import styles from './page.module.css';
-import PostHero from './_components/PostHero/PostHero';
-import PostsGrid from './_components/PostsGrid/PostsGrid';
+import PostHero from '../_components/PostHero/PostHero';
+import PostsGrid from '../_components/PostsGrid/PostsGrid';
 
-export default function Home() {
+export default function BlogHome() {
   const allPosts = getAllPosts();
 
   const heroPost = allPosts[0];

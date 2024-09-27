@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: sticky;
+  bottom: 0;
+
+  min-height: 100px;
+  width: 100%;
+  margin-top: 150px;
+
+  background-color: rgb(63, 57, 88);
+  color: white;
+}

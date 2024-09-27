@@ -1,0 +1,13 @@
+.image {
+  height: 350px;
+  object-fit: cover;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 65ch;
+  margin: auto;
+}

@@ -1,0 +1,75 @@
+@use './variables' as *;
+@use './typescales';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: calc($line-height-body * $body-font-size * 2) 0 calc($line-height-body * $body-font-size) 0;
+}
+
+h1 {
+  @include typescales.display-large;
+  line-height: $line-height-titles;
+  font-weight: $font-weight-titles;
+  letter-spacing: -0.25pt;
+}
+
+h2 {
+  @include typescales.display_medium;
+  line-height: $line-height-titles;
+  font-weight: $font-weight-titles;
+}
+
+h3 {
+  @include typescales.display-small;
+  line-height: $line-height-titles;
+  font-weight: $font-weight-titles;
+}
+
+h4 {
+  @include typescales.headline-large;
+  line-height: $line-height-titles;
+  font-weight: $font-weight-titles;
+}
+
+h5 {
+  @include typescales.headline-medium;
+  line-height: $line-height-titles;
+  font-weight: $font-weight-titles;
+}
+
+h6 {
+  @include typescales.headline-small;
+  line-height: $line-height-titles;
+  font-weight: $font-weight-titles;
+}
+
+body {
+  @include typescales.body-medium;
+  line-height: $line-height-body;
+  letter-spacing: 0.25pt;
+}
+
+p {
+  // max-width: 65ch;
+  max-width: calc($body-font-size * 35);
+  margin: calc($line-height-body * $body-font-size) 0;
+}
+
+//
+//
+//
+//
+// body {
+//   /* font-family: $font-AR-one-sans; */
+//   /* font-family: Arial, Helvetica, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale; */
+
+//   font-size: $body-font-size;
+//   line-height: $line-height;
+//   color: $body-color;
+// }

@@ -1,0 +1,15 @@
+.postHero {
+  width: 80%;
+  margin: auto;
+  cursor: pointer;
+}
+
+.imgContainer {
+  position: relative;
+  height: 350px;
+  width: 100%;
+}
+
+.excerpt {
+  max-width: unset;
+}
