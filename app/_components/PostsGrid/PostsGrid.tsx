@@ -1,8 +1,6 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { Post } from '@/interfaces/post';
-import Image from 'next/image';
 import styles from './styles.module.css';
 import PostPreview from '../PostPreview/PostPreview';
 
