@@ -8,6 +8,10 @@ export default function Typo() {
       <h5>Heading 5</h5>
       <h6>Heading 6</h6>
 
+      <p className="label-large">my test caption</p>
+      <p className="label-medium">my test caption</p>
+      <p className="label-small">my test caption</p>
+
       <article>
         <h1>Heading 1</h1>
 

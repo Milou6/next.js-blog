@@ -1,4 +1,4 @@
-.footer {
+.footer :global {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,8 +8,13 @@
 
   min-height: 100px;
   width: 100%;
-  margin-top: 150px;
+  margin-top: 100px;
 
-  background-color: rgb(63, 57, 88);
-  color: white;
+  .br-corner {
+    display: flex;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 }

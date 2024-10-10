@@ -2,7 +2,7 @@ import markdownToHtml from '@/lib/markdownToHtml';
 import { notFound } from 'next/navigation';
 import { getPostByYearAndSlug } from '@/lib/api';
 
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import PostHeroImage from '@/app/_components/PostHeroImage/PostHeroImage';
 
 export default async function Post({ params }: { params: { year: string; slug: string } }) {
@@ -15,11 +15,11 @@ export default async function Post({ params }: { params: { year: string; slug: s
 
   return (
     <>
-      <PostHeroImage imgSrc={post.coverImage}></PostHeroImage>
+      <PostHeroImage imgSrc={post.coverImage} imgCaption={post.imageCaption}></PostHeroImage>
 
-      <h4>{post.title}</h4>
+      <h1 className={styles.title}>{post.title}</h1>
 
-      <article className={styles.post}>
+      <article className={styles.article}>
         <div dangerouslySetInnerHTML={{ __html: postContent }} />
       </article>
     </>

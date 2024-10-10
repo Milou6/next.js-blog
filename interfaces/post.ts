@@ -5,6 +5,7 @@ export type Post = {
   slug: string;
   excerpt: string;
   coverImage: string;
+  imageCaption: string;
   date: string;
   fileName: string;
   // author: Author;
@@ -14,3 +15,8 @@ export type Post = {
   content: string;
   preview?: boolean;
 };
+
+export function getPostUrl(post: Post) {
+  const postYear = post.date.slice(0, 4);
+  return `/posts/${postYear}/${post.slug}`;
+}

@@ -1,0 +1,12 @@
+@use '/app/css/breakpoints' as *;
+@use '/app/css/variables' as *;
+
+.main {
+  @media screen and (max-width: $bp-mobile) {
+    margin: $body-margin-mobile;
+  }
+  @media screen and (max-width: $bp-tablet) {
+    margin: $body-margin-tablet;
+  }
+  margin: $body-margin-desktop;
+}

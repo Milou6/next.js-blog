@@ -1,0 +1,75 @@
+@use './variables' as *;
+@use './utils' as *;
+
+@import './typography.scss';
+@import './color_scheme.scss';
+@import './_icons.scss';
+
+* {
+  /* box-sizing: border-box;
+  padding: 0;
+  margin: 0; */
+}
+
+/* Base tags */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  @include flex-center;
+
+  background-color: unset;
+  border: unset;
+  border-radius: $border-radius;
+  cursor: pointer;
+}
+
+.btn-primary {
+  @extend .primary-container;
+  &:hover {
+    background-color: color-mix(in srgb, $primaryContainer, $onPrimaryContainer 8%);
+  }
+  &:active {
+    background-color: color-mix(in srgb, $primaryContainer, $onPrimaryContainer 10%);
+  }
+}
+
+.btn-secondary {
+  @extend .secondary-container;
+  &:hover {
+    background-color: color-mix(in srgb, $secondaryContainer, $onSecondaryContainer 8%);
+  }
+  &:active {
+    background-color: color-mix(in srgb, $secondaryContainer, $onSecondaryContainer 10%);
+  }
+}
+
+a {
+  @include flex-center;
+  border-radius: $border-radius;
+  text-decoration: none;
+  user-select: none;
+  &.active {
+    // text-decoration: underline;
+  }
+  &:visited {
+    color: inherit;
+  }
+}

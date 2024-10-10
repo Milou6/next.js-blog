@@ -1,16 +1,15 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { Post } from '@/interfaces/post';
+import { getPostUrl, Post } from '@/interfaces/post';
 import Image from 'next/image';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 export default function PostPreview({ post }: { post: Post }) {
   const router = useRouter();
 
   function handleClick() {
-    const postYear = post.date.slice(0, 4);
-    router.push(`/posts/${postYear}/${post.slug}`);
+    router.push(getPostUrl(post));
   }
 
   return (

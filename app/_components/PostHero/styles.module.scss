@@ -1,0 +1,24 @@
+@use '/app/css/variables' as *;
+
+.postHero {
+  width: 100%;
+  margin: 0 auto 60px auto;
+}
+
+.imgContainer {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.postTitle {
+  cursor: pointer;
+  color: $primary;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.excerpt {
+  max-width: unset;
+}

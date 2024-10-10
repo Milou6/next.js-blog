@@ -1,0 +1,36 @@
+@use './variables' as *;
+
+:root {
+  background-color: $surface;
+  color: $onSurface;
+}
+
+.primary {
+  background-color: $primary;
+  color: $onPrimary;
+}
+.secondary {
+  background-color: $secondary;
+  color: $onSecondary;
+}
+.tertiary {
+  background-color: $tertiary;
+  color: $onTertiary;
+}
+
+.primary-container {
+  background-color: $primaryContainer;
+  color: $onPrimaryContainer;
+}
+.secondary-container {
+  background-color: $secondaryContainer;
+  color: $onSecondaryContainer;
+}
+.tertiary-container {
+  background-color: $tertiaryContainer;
+  color: $onTertiaryContainer;
+}
+
+.on-surface-variant {
+  color: $onSurfaceVariant;
+}

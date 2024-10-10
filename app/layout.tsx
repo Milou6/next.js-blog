@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Header from './_components/Header/Header';
 import Footer from './_components/Footer/Footer';
 
-import './globals.css';
-import './css/typography.scss';
+import './css/globals.scss';
 import { AR_One_Sans } from 'next/font/google';
+import styles from './layout.module.scss';
 
 const AROneSans = AR_One_Sans({
   subsets: ['latin'],
@@ -13,7 +13,7 @@ const AROneSans = AR_One_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'Next.js blog',
   description: 'A Next.js-powered blog',
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
       <body>
         <Header></Header>
 
-        {children}
+        <main className={styles.main}>{children}</main>
 
         <Footer></Footer>
       </body>

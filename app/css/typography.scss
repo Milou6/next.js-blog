@@ -1,5 +1,21 @@
 @use './variables' as *;
+@use './breakpoints' as *;
 @use './typescales';
+
+:root {
+  font-size: 16px;
+  @media screen and (max-width: $bp-tablet) {
+    font-size: 14px;
+  }
+  // @media screen and (max-width: $bp-mobile) {
+  //   font-size: 14px;
+  // }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 h1,
 h2,
@@ -7,50 +23,91 @@ h3,
 h4,
 h5,
 h6 {
-  margin: calc($line-height-body * $body-font-size * 2) 0 calc($line-height-body * $body-font-size) 0;
+  margin-top: calc($line-height-body * $body-font-size * 2);
+  margin-bottom: calc($line-height-body * $body-font-size);
+  line-height: $line-height-titles;
+  letter-spacing: -0.05em;
+}
+
+.display-large {
+  @include typescales.display-large;
+  font-weight: $font-weight-regular;
+}
+.display-medium {
+  @include typescales.display_medium;
+  font-weight: $font-weight-regular;
+}
+.display-small {
+  @include typescales.display-small;
+  font-weight: $font-weight-regular;
 }
 
 h1 {
-  @include typescales.display-large;
-  line-height: $line-height-titles;
-  font-weight: $font-weight-titles;
-  letter-spacing: -0.25pt;
+  @include typescales.headline-large;
+  font-weight: $font-weight-regular;
 }
 
 h2 {
-  @include typescales.display_medium;
-  line-height: $line-height-titles;
-  font-weight: $font-weight-titles;
+  @include typescales.headline-medium;
+  font-weight: $font-weight-regular;
 }
 
 h3 {
-  @include typescales.display-small;
-  line-height: $line-height-titles;
-  font-weight: $font-weight-titles;
+  @include typescales.headline-small;
+  font-weight: $font-weight-regular;
 }
 
 h4 {
-  @include typescales.headline-large;
-  line-height: $line-height-titles;
-  font-weight: $font-weight-titles;
+  @include typescales.title-large;
+  font-weight: $font-weight-regular;
 }
 
 h5 {
-  @include typescales.headline-medium;
-  line-height: $line-height-titles;
-  font-weight: $font-weight-titles;
+  @include typescales.title-medium;
+  font-weight: $font-weight-medium;
 }
 
 h6 {
-  @include typescales.headline-small;
-  line-height: $line-height-titles;
-  font-weight: $font-weight-titles;
+  @include typescales.title-small;
+  font-weight: $font-weight-medium;
 }
 
+// Labels
+.label-large,
+.label-medium,
+.label-small {
+  margin: 0;
+  letter-spacing: -0.05em;
+}
+
+.label-large {
+  @include typescales.label-large;
+  font-weight: 700;
+}
+.label-medium {
+  @include typescales.label-medium;
+  font-weight: 600;
+}
+.label-small {
+  @include typescales.label-small;
+  font-weight: 500;
+}
+
+// Body
 body {
   @include typescales.body-medium;
   line-height: $line-height-body;
   letter-spacing: 0.25pt;
+}
+
+.body-large {
+  @include typescales.body-large;
+}
+.body-medium {
+  @include typescales.body-medium;
+}
+.body-small {
+  @include typescales.body-small;
 }
 
 p {
@@ -59,17 +116,7 @@ p {
   margin: calc($line-height-body * $body-font-size) 0;
 }
 
-//
-//
-//
-//
-// body {
-//   /* font-family: $font-AR-one-sans; */
-//   /* font-family: Arial, Helvetica, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale; */
-
-//   font-size: $body-font-size;
-//   line-height: $line-height;
-//   color: $body-color;
-// }
+a {
+  @include typescales.label-large;
+  font-weight: 700;
+}

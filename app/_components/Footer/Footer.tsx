@@ -1,14 +1,18 @@
-import styles from './styles.module.css';
+'use client';
+import styles from './styles.module.scss';
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <a href="http://" target="_blank" rel="noopener noreferrer">
-        Link1
-      </a>
-      <a href="http://" target="_blank" rel="noopener noreferrer">
-        Link2
-      </a>
+    <footer className={[styles.footer, 'secondary'].join(' ')}>
+      My little footer
+      <div className="br-corner">
+        Made with 💪 by&nbsp;
+        <span>
+          <a href="https://github.com/Milou6" target="_blank">
+            Emile Haas
+          </a>
+        </span>
+      </div>
     </footer>
   );
 }
