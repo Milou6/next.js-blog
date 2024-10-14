@@ -1,7 +1,7 @@
 'use client';
-import { RefObject, useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
-import { HexColorPicker, RgbColor, RgbColorPicker } from 'react-colorful';
+import { RgbColor, RgbColorPicker } from 'react-colorful';
 import { SchemeFidelity } from '@material/material-color-utilities';
 import { argbToCSSRgb, rgbToHct } from '@/lib/colors-service';
 
@@ -11,11 +11,8 @@ export default function ColorPicker({ className = undefined }: { className?: str
     updateCSSVars(rgbColor);
   });
 
-  const pickerRef = useRef<any>(null);
-
   const [rgbColor, setRgbColor] = useState({ r: 98, g: 209, b: 239 }); // good balance
   const [showColorPicker, setShowColorPicker] = useState(false);
-  const [isFocused, setIsFocused] = useState(false);
 
   const updateCSSVars = (rgbColor: RgbColor) => {
     const scheme = new SchemeFidelity(rgbToHct(rgbColor), false, 0);
@@ -58,46 +55,19 @@ export default function ColorPicker({ className = undefined }: { className?: str
   };
 
   function toggleColorPicker() {
-    console.log(pickerRef);
-    if (!showColorPicker && pickerRef.current != null) {
-      console.log('set focus on child');
-      pickerRef.current.firstChild.focus();
-    }
-
-    console.log('toggleColorPicker');
-    setIsFocused(!showColorPicker);
     setShowColorPicker(!showColorPicker);
   }
 
-  // // Handlers for focus and blur (unfocus) events
-  // const handleFocus = () => {
-  //   console.log('handleFocus');
-  //   // setIsFocused(true);
-  // };
-
-  // const handleBlur = () => {
-  //   console.log('handleBlur');
-  //   setIsFocused(false);
-  //   setShowColorPicker(false);
-  // };
-
   return (
     <>
-      {/* <div className={styles.colorPickerContainer}></div> */}
       <div className={[className, styles.colorPickerContainer].join(' ')}>
-        {/* {showColorPicker && <RgbColorPicker color={rgbColor} onChange={setRgbColor} />} */}
-
-        <div ref={pickerRef}>
+        <div>
           <RgbColorPicker
-            tabIndex={0}
-            // onBlur={handleBlur}
-            className={showColorPicker && isFocused ? 'picker visible' : 'picker'}
+            className={showColorPicker ? 'picker visible' : 'picker'}
             color={rgbColor}
             onChange={setRgbColor}
           />
         </div>
-
-        {/* <p>This component is {isFocused ? 'focused' : 'unfocused'}!</p> */}
 
         <button className="primary-container">
           <span className={['', 'material-symbols-outlined'].join(' ')} onClick={toggleColorPicker}>
