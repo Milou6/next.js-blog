@@ -1,17 +1,22 @@
-.image {
-  height: 350px;
-  object-fit: cover;
-}
-
-.title {
+.articlePage :global {
   width: 100%;
-}
 
-.article {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .image {
+    height: 350px;
+    object-fit: cover;
+  }
 
-  max-width: 65ch;
-  margin: auto;
+  .title {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 65ch;
+    margin: auto;
+  }
 }

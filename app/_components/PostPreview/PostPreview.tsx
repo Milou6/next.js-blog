@@ -13,13 +13,31 @@ export default function PostPreview({ post }: { post: Post }) {
   }
 
   return (
-    <div className={styles.postPreview} onClick={handleClick}>
-      <div className={styles.imgContainer}>
+    <div className={styles.postPreview}>
+      <div className="img-container" onClick={handleClick}>
         <Image src={post.coverImage} fill style={{ objectFit: 'cover' }} alt="Picture of the author" />
       </div>
 
-      <h6>{post.title}</h6>
-      <p className={styles.excerpt}>{post.excerpt}</p>
+      <div className="titleContainer">
+        <h6 className="title" onClick={handleClick}>
+          {post.title}
+        </h6>
+        <span className="postDetails">
+          <span className="postDate label-medium on-surface-variant">
+            {new Date(post.date).toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </span>
+
+          <span className="post-tags">
+            {post.tags.map((tag) => (
+              <div key={tag} className="chip secondary-container label-small">
+                {tag}
+              </div>
+            ))}
+          </span>
+        </span>
+      </div>
+
+      <div className={styles.excerpt} dangerouslySetInnerHTML={{ __html: post.excerpt }}></div>
     </div>
   );
 }

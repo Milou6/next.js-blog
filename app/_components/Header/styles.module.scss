@@ -1,4 +1,4 @@
-@use '/app/css/variables' as *;
+// @use '/app/css/variables' as *;
 
 .header {
   display: flex;
@@ -9,6 +9,6 @@
   min-height: 50px;
   // box-shadow: 2px 2px 5px 0px rgb(0 0 0 / 20%);
 
-  background-color: $surfaceContainer;
-  color: $onSurface;
+  background-color: var(--surfaceContainer);
+  color: var(--onSurface);
 }

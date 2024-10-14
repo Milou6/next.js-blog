@@ -3,12 +3,13 @@ import matter from 'gray-matter';
 import { join } from 'path';
 import { Post } from '@/interfaces/post';
 import { getSearchParamAsInt } from './utils';
+import markdownToHtml from './markdownToHtml';
 
 const POSTS_DIR = join(process.cwd(), '_posts');
 const POSTS_PER_PAGE = 4;
 const POSTS_FIRST_PAGE = POSTS_PER_PAGE + 1; // show extra PostHero on home page
 
-export function getLatestPosts({ page = undefined }: { page: string | undefined }): Post[] {
+export async function getLatestPosts({ page = undefined }: { page: string | undefined }): Promise<Post[]> {
   let postsToFetch: string[] = [];
   const pageNumber = getSearchParamAsInt(page);
 
@@ -22,8 +23,8 @@ export function getLatestPosts({ page = undefined }: { page: string | undefined 
     postsToFetch = fileNames.slice(0, POSTS_FIRST_PAGE);
   }
 
-  const posts: Post[] = postsToFetch.map((filename) => getPostByFileName(filename));
-  return posts;
+  const posts: Promise<Post>[] = postsToFetch.map(async (filename) => getPostByFileName(filename));
+  return await Promise.all(posts);
 }
 
 // export function getAllPosts(): Post[] {
@@ -31,11 +32,10 @@ export function getLatestPosts({ page = undefined }: { page: string | undefined 
 //   fileNames.reverse();
 
 //   const posts: Post[] = fileNames.map((slug) => getPostByFileName(slug));
-
 //   return posts;
 // }
 
-export function getPostByYearAndSlug(year: string, slug: string) {
+export async function getPostByYearAndSlug(year: string, slug: string) {
   const fileNames = fs.readdirSync(POSTS_DIR).map((file) => file.replace(/\.md$/, ''));
 
   const matchingFile = fileNames.find((file) => file.endsWith(slug) && file.startsWith(year));
@@ -43,10 +43,10 @@ export function getPostByYearAndSlug(year: string, slug: string) {
     throw new Error(`Cannot find blog matching year: ${year} & slug: ${slug}`);
   }
 
-  return getPostByFileName(matchingFile);
+  return await getPostByFileName(matchingFile);
 }
 
-export function getPostByFileName(filename: string) {
+export async function getPostByFileName(filename: string) {
   const postFileName = filename.replace(/\.md$/, '');
   const postDate = postFileName.slice(0, 10); // YYYY-MM-DD
   const postSlug = postFileName.slice(11); // my-blog-post
@@ -54,8 +54,9 @@ export function getPostByFileName(filename: string) {
   const fullPath = join(POSTS_DIR, `${postFileName}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
+  const postExcerpt = await markdownToHtml(data.excerpt || '');
 
-  return { ...data, content, date: postDate, slug: postSlug, fileName: postFileName } as Post;
+  return { ...data, content, excerpt: postExcerpt, date: postDate, slug: postSlug, fileName: postFileName } as Post;
 }
 
 export function getLastPageNumber(): number {

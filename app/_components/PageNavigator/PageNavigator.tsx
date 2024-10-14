@@ -26,7 +26,7 @@ export default function PageNavigator({
 
       {previousPage > 0 && (
         <Link
-          className="link btn-secondary"
+          className="btn-secondary"
           key={previousPage}
           href={{ pathname: '/blog', query: { page: previousPage } }}
           draggable={false}
@@ -36,7 +36,7 @@ export default function PageNavigator({
       )}
 
       <Link
-        className="link active btn-primary"
+        className="active btn-primary"
         key={currentPage}
         href={{ pathname: '/blog', query: { page: currentPage } }}
         draggable={false}
@@ -46,7 +46,7 @@ export default function PageNavigator({
 
       {nextPage <= lastPage && (
         <Link
-          className="link btn-secondary"
+          className="btn-secondary"
           key={nextPage}
           href={{ pathname: '/blog', query: { page: nextPage } }}
           draggable={false}

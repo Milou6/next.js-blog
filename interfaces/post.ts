@@ -4,6 +4,7 @@ export type Post = {
   title: string;
   slug: string;
   excerpt: string;
+  tags: string[];
   coverImage: string;
   imageCaption: string;
   date: string;
@@ -18,5 +19,5 @@ export type Post = {
 
 export function getPostUrl(post: Post) {
   const postYear = post.date.slice(0, 4);
-  return `/posts/${postYear}/${post.slug}`;
+  return `/posts/${postYear}/${post.slug}#article`;
 }

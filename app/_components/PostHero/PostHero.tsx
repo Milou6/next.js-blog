@@ -26,11 +26,13 @@ export default function PostHero({ post }: { post: Post }) {
         />
       </div>
 
-      <h3 className={styles.postTitle} onClick={handleClick}>
+      <h2 className={styles.postTitle} onClick={handleClick}>
         {post.title}
-      </h3>
-      <p className="label-small on-surface-variant">{post.date}</p>
-      <p className={styles.excerpt}>{post.excerpt}</p>
+      </h2>
+      <p className="label-medium on-surface-variant">
+        {new Date(post.date).toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </p>
+      <div className={styles.excerpt} dangerouslySetInnerHTML={{ __html: post.excerpt }}></div>
     </div>
   );
 }

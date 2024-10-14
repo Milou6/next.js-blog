@@ -1,12 +1,21 @@
 @use '/app/css/breakpoints' as *;
 @use '/app/css/variables' as *;
 
-.main {
-  @media screen and (max-width: $bp-mobile) {
-    margin: $body-margin-mobile;
+.body :global {
+  main {
+    @media screen and (max-width: $bp-mobile) {
+      margin: $body-margin-mobile;
+    }
+    @media screen and (max-width: $bp-tablet) {
+      margin: $body-margin-tablet;
+    }
+    margin: $body-margin-desktop;
   }
-  @media screen and (max-width: $bp-tablet) {
-    margin: $body-margin-tablet;
+
+  .fabContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
   }
-  margin: $body-margin-desktop;
 }

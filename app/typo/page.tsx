@@ -16,11 +16,18 @@ export default function Typo() {
         <h1>Heading 1</h1>
 
         <p>
-          As front-end developers, creating flexible and responsive layouts is a critical part of our work. While older
-          methods like floats and positioning were used for this, modern web development has given us two essential
-          tools for layout creation: **CSS Grid** and **Flexbox**. But when should you use Grid over Flexbox? How do
-          they differ, and can they be used together? In this post, we will break down each of these technologies,
-          understand their use cases, and share tips to help you make better layout decisions in your next project.
+          <a href="https://pages.github.com/" target="_blank">
+            This is a link to Github
+          </a>
+          . As front-end developers, creating flexible and responsive layouts is a critical part of our work. While
+          older methods like floats and positioning were used for this, modern web development has given us two
+          essential tools for layout creation: **CSS Grid** and **Flexbox**. But when should you use Grid over Flexbox?
+          How do they differ, and can they be used together? In this post, we will break down each of these
+          technologies, understand their use cases, and share tips to help you make better layout decisions in your next
+          project.&nbsp;
+          <a href="https://testing.com" target="_blank">
+            This is a non-visited link to Github
+          </a>
         </p>
 
         <h2>Heading 2</h2>

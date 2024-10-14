@@ -86,7 +86,8 @@ h6 {
 }
 .label-medium {
   @include typescales.label-medium;
-  font-weight: 600;
+  // font-weight: 600;
+  font-weight: 500;
 }
 .label-small {
   @include typescales.label-small;
@@ -119,4 +120,32 @@ p {
 a {
   @include typescales.label-large;
   font-weight: 700;
+}
+
+a {
+  border-radius: $border-radius;
+  text-decoration: none;
+  user-select: none;
+  &.active {
+  }
+  &:visited {
+    color: inherit;
+  }
+}
+
+// Article specific styles
+article a,
+figcaption a,
+a.link {
+  text-decoration: underline;
+  // color: var(--primary);
+  color: var(--secondary);
+
+  @include typescales.body-medium;
+  font-weight: normal;
+
+  &:visited {
+    // color: var(--secondary);
+    color: var(--tertiary);
+  }
 }

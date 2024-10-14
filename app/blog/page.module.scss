@@ -1,8 +1,13 @@
 @use '/app/css/breakpoints' as *;
 @use '/app/css/variables' as *;
 
-.postHero {
-  margin-bottom: 70px;
+.homePage :global {
+  width: 100%;
+  position: relative;
+
+  .divider {
+    margin: 50px auto;
+  }
 }
 
 /* .page {

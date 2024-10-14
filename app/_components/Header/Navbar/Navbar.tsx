@@ -9,10 +9,10 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      <Link className={`link ${pathname === '/' ? 'active' : ''}`} href="/">
+      <Link className={`${pathname === '/' ? 'active' : ''}`} href="/">
         Home
       </Link>
-      <Link className={`link ${pathname === '/about' ? 'active' : ''}`} href="/about">
+      <Link className={`${pathname === '/about' ? 'active' : ''}`} href="/about">
         About
       </Link>
     </nav>

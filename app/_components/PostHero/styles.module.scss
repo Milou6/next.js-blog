@@ -1,24 +1,31 @@
 @use '/app/css/variables' as *;
+@use '/app/css/breakpoints' as *;
 
 .postHero {
   width: 100%;
-  margin: 0 auto 60px auto;
 }
 
 .imgContainer {
   position: relative;
-  height: 350px;
   width: 100%;
   cursor: pointer;
+
+  height: 350px;
+  @media screen and (max-width: $bp-mobile) {
+    height: 250px;
+  }
 }
 
 .postTitle {
   cursor: pointer;
-  color: $primary;
+  // color: $primary;
+  color: var(--primary);
   margin-top: 1rem;
   margin-bottom: 0;
 }
 
 .excerpt {
-  max-width: unset;
+  p {
+    max-width: unset;
+  }
 }

@@ -1,10 +1,17 @@
 @use '/app/css/variables' as *;
+@use '/app/css/typescales';
+@use '/app/css/breakpoints' as *;
 
-.heroImage {
-  height: 350px;
+.heroImage :global {
   width: 100%;
   /* object-fit: cover; */
   position: relative;
+  margin: 0;
+
+  height: 350px;
+  @media screen and (max-width: $bp-mobile) {
+    height: 250px;
+  }
 
   figcaption {
     position: absolute;
@@ -17,10 +24,21 @@
 
     height: 20px;
     padding: 3px;
+
+    // color: $onTertiaryContainer;
+    // background-color: $tertiaryContainer;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px 0 0 0;
 
-    .infoIcon {
+    // color: $primary;
+    a {
+      color: var(--outlineVariant);
+      @include typescales.label-small;
+      font-weight: 500;
+    }
+
+    .info-icon {
+      color: var(--outlineVariant);
       user-select: none;
       cursor: pointer;
     }

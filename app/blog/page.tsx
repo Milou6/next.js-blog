@@ -6,18 +6,14 @@ import { notFound } from 'next/navigation';
 import { getSearchParamAsInt } from '@/lib/utils';
 import PageNavigator from '../_components/PageNavigator/PageNavigator';
 
-export default function Page({ searchParams }: { searchParams: { [key: string]: string | undefined } }) {
-  const posts = getLatestPosts({ page: searchParams.page });
+export default async function Page({ searchParams }: { searchParams: { [key: string]: string | undefined } }) {
+  const posts = await getLatestPosts({ page: searchParams.page });
   if (posts.length == 0) {
     return notFound();
   }
 
   const pageNumber = getSearchParamAsInt(searchParams.page) ?? 1;
   const lastPageNumber = getLastPageNumber();
-
-  // if (pageNumber == 1) {
-
-  // }
 
   if (pageNumber > 1) {
     return (
@@ -32,8 +28,9 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
       <div className={styles.homePage}>
         <PostHero post={posts[0]}></PostHero>
 
-        <PostsGrid posts={posts.slice(1)}></PostsGrid>
+        <div className="divider"></div>
 
+        <PostsGrid posts={posts.slice(1)}></PostsGrid>
         <PageNavigator currentPage={pageNumber} lastPage={lastPageNumber}></PageNavigator>
       </div>
     );

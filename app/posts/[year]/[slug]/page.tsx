@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 import PostHeroImage from '@/app/_components/PostHeroImage/PostHeroImage';
 
 export default async function Post({ params }: { params: { year: string; slug: string } }) {
-  const post = getPostByYearAndSlug(params.year, params.slug);
+  const post = await getPostByYearAndSlug(params.year, params.slug);
   if (!post) {
     return notFound();
   }
@@ -14,14 +14,14 @@ export default async function Post({ params }: { params: { year: string; slug: s
   const postContent = await markdownToHtml(post.content || '');
 
   return (
-    <>
+    <div id="article" className={styles.articlePage}>
       <PostHeroImage imgSrc={post.coverImage} imgCaption={post.imageCaption}></PostHeroImage>
 
-      <h1 className={styles.title}>{post.title}</h1>
+      <h1 className="title">{post.title}</h1>
 
-      <article className={styles.article}>
+      <article>
         <div dangerouslySetInnerHTML={{ __html: postContent }} />
       </article>
-    </>
+    </div>
   );
 }

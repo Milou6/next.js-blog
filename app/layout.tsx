@@ -5,6 +5,7 @@ import Footer from './_components/Footer/Footer';
 import './css/globals.scss';
 import { AR_One_Sans } from 'next/font/google';
 import styles from './layout.module.scss';
+import ColorPicker from './_components/ColorPicker/ColorPicker';
 
 const AROneSans = AR_One_Sans({
   subsets: ['latin'],
@@ -24,10 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={AROneSans.className}>
-      <body>
+      <body className={styles.body}>
         <Header></Header>
 
-        <main className={styles.main}>{children}</main>
+        <div className="fabContainer">
+          <ColorPicker className="colorPicker"></ColorPicker>
+        </div>
+
+        <main>{children}</main>
 
         <Footer></Footer>
       </body>
