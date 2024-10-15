@@ -1,31 +1,54 @@
 @use '/app/css/variables' as *;
 @use '/app/css/breakpoints' as *;
 
-.postHero {
+.postHero :global {
   width: 100%;
-}
 
-.imgContainer {
-  position: relative;
-  width: 100%;
-  cursor: pointer;
+  .imgContainer {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
 
-  height: 350px;
-  @media screen and (max-width: $bp-mobile) {
-    height: 250px;
+    height: 350px;
+    @media screen and (max-width: $bp-mobile) {
+      height: 250px;
+    }
   }
-}
 
-.postTitle {
-  cursor: pointer;
-  // color: $primary;
-  color: var(--primary);
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
+  .titleContainer {
+    margin-top: 1rem;
+    margin-bottom: 0;
 
-.excerpt {
-  p {
-    max-width: unset;
+    .title {
+      color: var(--primary);
+      display: inline;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .postDetails {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+
+      width: fit-content;
+
+      .postDate {
+        width: fit-content;
+        white-space: nowrap;
+      }
+
+      .post-tags {
+        display: flex;
+        gap: 5px;
+        width: fit-content;
+      }
+    }
+  }
+
+  .excerpt {
+    p {
+      max-width: unset;
+    }
   }
 }

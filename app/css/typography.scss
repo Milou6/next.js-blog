@@ -7,9 +7,6 @@
   @media screen and (max-width: $bp-tablet) {
     font-size: 14px;
   }
-  // @media screen and (max-width: $bp-mobile) {
-  //   font-size: 14px;
-  // }
 }
 
 body {
@@ -86,7 +83,6 @@ h6 {
 }
 .label-medium {
   @include typescales.label-medium;
-  // font-weight: 600;
   font-weight: 500;
 }
 .label-small {
@@ -126,8 +122,7 @@ a {
   border-radius: $border-radius;
   text-decoration: none;
   user-select: none;
-  &.active {
-  }
+
   &:visited {
     color: inherit;
   }
@@ -138,14 +133,13 @@ article a,
 figcaption a,
 a.link {
   text-decoration: underline;
-  // color: var(--primary);
   color: var(--secondary);
-
-  @include typescales.body-medium;
   font-weight: normal;
+}
 
+article a {
+  @include typescales.body-medium;
   &:visited {
-    // color: var(--secondary);
     color: var(--tertiary);
   }
 }

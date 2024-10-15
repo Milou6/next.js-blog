@@ -1,11 +1,11 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 import { RgbColor, RgbColorPicker } from 'react-colorful';
 import { SchemeFidelity } from '@material/material-color-utilities';
 import { argbToCSSRgb, rgbToHct } from '@/lib/colors-service';
 
-// export default function ColorPicker() {
 export default function ColorPicker({ className = undefined }: { className?: string | undefined }) {
   useEffect(() => {
     updateCSSVars(rgbColor);
@@ -59,22 +59,18 @@ export default function ColorPicker({ className = undefined }: { className?: str
   }
 
   return (
-    <>
-      <div className={[className, styles.colorPickerContainer].join(' ')}>
-        <div>
-          <RgbColorPicker
-            className={showColorPicker ? 'picker visible' : 'picker'}
-            color={rgbColor}
-            onChange={setRgbColor}
-          />
-        </div>
+    <div className={[className, styles.colorPickerContainer].join(' ')}>
+      <RgbColorPicker
+        className={showColorPicker ? 'picker visible' : 'picker'}
+        color={rgbColor}
+        onChange={setRgbColor}
+      />
 
-        <button className="primary-container">
-          <span className={['', 'material-symbols-outlined'].join(' ')} onClick={toggleColorPicker}>
-            palette
-          </span>
-        </button>
-      </div>
-    </>
+      <button className="btn-primary">
+        <span className="material-symbols-outlined" onClick={toggleColorPicker}>
+          palette
+        </span>
+      </button>
+    </div>
   );
 }

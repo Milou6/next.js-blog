@@ -30,7 +30,6 @@
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px 0 0 0;
 
-    // color: $primary;
     a {
       color: var(--outlineVariant);
       @include typescales.label-small;

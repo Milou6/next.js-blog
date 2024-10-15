@@ -4,13 +4,6 @@
 @import './colors.scss';
 @import './typography.scss';
 @import './color_scheme.scss';
-@import './_icons.scss';
-
-* {
-  /* box-sizing: border-box;
-  padding: 0;
-  margin: 0; */
-}
 
 /* Base tags */
 html,
@@ -72,4 +65,11 @@ button {
   background-color: var(--outlineVariant);
   width: 50%;
   margin: 10px auto;
+}
+
+.chip {
+  user-select: none;
+  white-space: nowrap;
+  padding: 0px 10px;
+  border-radius: 10px;
 }

@@ -17,7 +17,6 @@
     }
 
     .postDetails {
-      // margin-left: 10px;
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -26,18 +25,13 @@
 
       .postDate {
         width: fit-content;
+        white-space: nowrap;
       }
 
       .post-tags {
         display: flex;
         gap: 5px;
         width: fit-content;
-
-        .chip {
-          user-select: none;
-          padding: 0px 10px;
-          border-radius: 10px;
-        }
       }
     }
   }

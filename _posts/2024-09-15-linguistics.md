@@ -3,7 +3,7 @@ title: 'Decoding the Linguistics of Arrival: How Language Shapes Reality'
 excerpt: 'In the sci-fi movie *Arrival*, language is more than just a means of communication; it’s a key to understanding an alien species and even reshaping the way we perceive time. This post explores the linguistic theories and concepts featured in the film and how they relate to real-world linguistics.'
 tags: ['linguistics', 'cinema', 'sci-fi', 'AI']
 coverImage: '/images/arrival-movie.jpg'
-imageCaption: 'Photo by <a href="https://unsplash.com/@tianshu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Tianshu Liu</a> on <a href="https://unsplash.com/photos/pagoda-temple-surrounded-by-trees-aqZ3UAjs_M4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
+imageCaption: 'Arrival movie'
 ---
 
 Arrival (2016), directed by Denis Villeneuve, [GitHub Pages](https://pages.github.com/) is not just a story about extraterrestrial contact—it’s a profound exploration of how language shapes our understanding of reality. At the heart of the film is a linguist, Dr. Louise Banks (played by Amy Adams), who is tasked with deciphering the alien language of the Heptapods. But _Arrival_ goes beyond typical sci-fi tropes, delving into complex linguistic theories and presenting language as a tool that can reshape our perception of time and existence.
