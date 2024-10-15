@@ -4,6 +4,7 @@ excerpt: 'In the sci-fi movie *Arrival*, language is more than just a means of c
 tags: ['linguistics', 'cinema', 'sci-fi', 'AI']
 coverImage: '/images/arrival-movie.jpg'
 imageCaption: 'Arrival movie'
+imageAlt: "Arrival's Louise Banks looking at the Heptapods through a screen of fog"
 ---
 
 Arrival (2016), directed by Denis Villeneuve, [GitHub Pages](https://pages.github.com/) is not just a story about extraterrestrial contact—it’s a profound exploration of how language shapes our understanding of reality. At the heart of the film is a linguist, Dr. Louise Banks (played by Amy Adams), who is tasked with deciphering the alien language of the Heptapods. But _Arrival_ goes beyond typical sci-fi tropes, delving into complex linguistic theories and presenting language as a tool that can reshape our perception of time and existence.

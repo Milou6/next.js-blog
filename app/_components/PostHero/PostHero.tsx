@@ -21,7 +21,7 @@ export default function PostHero({ post }: { post: Post }) {
           priority
           sizes="100vw"
           style={{ objectFit: 'cover' }}
-          alt="Picture of the author"
+          alt={post.imageAlt}
           onClick={handleClick}
         />
       </div>

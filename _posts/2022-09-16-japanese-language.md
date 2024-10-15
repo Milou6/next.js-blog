@@ -4,6 +4,7 @@ excerpt: 'The Japanese language is a captivating blend of history, culture, and 
 tags: ['linguistics', 'japanese']
 coverImage: '/images/manuel-cosentino-d92I1Of2ofQ-unsplash.jpg'
 imageCaption: 'Photo by <a href="https://unsplash.com/@manucosen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Manuel Cosentino</a> on <a href="https://unsplash.com/photos/shinjuku-tokyo-japan-d92I1Of2ofQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
+imageAlt: 'Kabukicho Gate with Kanji writing in Shinjuku, Tokyo'
 ---
 
 The Japanese language is a rich tapestry of history and cultural depth, marked by unique linguistic features that set it apart from other languages. From its three writing systems to its honorifics and subtle nuances, learning Japanese offers a fascinating glimpse into both the structure of language and the culture it embodies.

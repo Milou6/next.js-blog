@@ -4,6 +4,7 @@ excerpt: 'Japan is a country of contrast, blending ancient traditions with cutti
 tags: ['Japan', 'travel']
 coverImage: '/images/tianshu-liu-aqZ3UAjs_M4-unsplash.jpg'
 imageCaption: 'Photo by <a href="https://unsplash.com/@tianshu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Tianshu Liu</a> on <a href="https://unsplash.com/photos/pagoda-temple-surrounded-by-trees-aqZ3UAjs_M4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
+imageAlt: 'A view of Fushimi Inari Shrine, the city behind it & Mt. Fuji'
 ---
 
 ### Exploring Japan: A Complete Guide for First-Time Travelers

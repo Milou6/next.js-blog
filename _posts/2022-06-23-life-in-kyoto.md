@@ -4,6 +4,7 @@ excerpt: 'Kyoto, Japan’s cultural heart, offers a unique blend of ancient trad
 tags: ['japan', 'travel']
 coverImage: '/images/shun-idota-XavWC3VZaGY-unsplash.jpg'
 imageCaption: 'Photo by <a href="https://unsplash.com/@itzshunnn?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">shun idota</a> on <a href="https://unsplash.com/photos/a-tall-red-building-sitting-on-top-of-a-lush-green-hillside-XavWC3VZaGY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
+imageAlt: 'A view of Fushimi Inari Shrine and the city behind it'
 ---
 
 Kyoto, the former imperial capital of Japan, is often described as the cultural and spiritual heart of the country. Life in Kyoto is a mesmerizing blend of old and new, where you can find ancient temples just steps away from modern cafes and art galleries. Whether you're drawn to its deep-rooted traditions or its peaceful, natural beauty, Kyoto offers a unique lifestyle unlike anywhere else in Japan.

@@ -15,7 +15,7 @@ export default async function Post({ params }: { params: { year: string; slug: s
 
   return (
     <div id="article" className={styles.articlePage}>
-      <PostHeroImage imgSrc={post.coverImage} imgCaption={post.imageCaption}></PostHeroImage>
+      <PostHeroImage imgSrc={post.coverImage} imgCaption={post.imageCaption} imgAlt={post.imageAlt}></PostHeroImage>
 
       <h1 className="title">{post.title}</h1>
 

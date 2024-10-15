@@ -15,7 +15,13 @@ export default function PostPreview({ post }: { post: Post }) {
   return (
     <div className={styles.postPreview}>
       <div className="img-container" onClick={handleClick}>
-        <Image src={post.coverImage} fill style={{ objectFit: 'cover' }} alt="Picture of the author" />
+        <Image
+          src={post.coverImage}
+          fill
+          sizes="(max-width: 870px) 100vw, 50vw"
+          style={{ objectFit: 'cover' }}
+          alt={post.imageAlt}
+        />
       </div>
 
       <div className="titleContainer">

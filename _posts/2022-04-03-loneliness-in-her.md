@@ -4,6 +4,7 @@ excerpt: 'Spike Jonze’s 2013 film *Her* delves into the complex relationship b
 tags: ['cinema', 'sci-fi', 'AI']
 coverImage: '/images/her-movie.jpg'
 imageCaption: 'Courtesy of Warner Bros. Picture - © 2013'
+imageAlt: 'Joaquin Phoenix looking over a night city skyline'
 ---
 
 Spike Jonze’s _Her_ (2013) is a hauntingly beautiful film that explores the intersection of technology, love, and loneliness. Set in a near-future world where artificial intelligence is integrated into everyday life, _Her_ tells the story of Theodore Twombly, a lonely writer who develops an intimate relationship with his operating system, Samantha. What begins as a strange experiment soon evolves into a deeply emotional connection, raising profound questions about the nature of love and what it means to be human in an increasingly digital world.

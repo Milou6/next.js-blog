@@ -4,6 +4,7 @@ excerpt: 'In *The Last of Us*, the terrifying Cordyceps virus turns humans into 
 tags: ['TV', 'science', 'gaming']
 coverImage: '/images/last-of-us-fungus-pedro-pascal.jpg'
 imageCaption: 'Getty Images'
+imageAlt: "The Last of Us' characters looking at a Cordyceps zombie"
 ---
 
 Naughty Dog’s _The Last of Us_ brought us one of the most haunting post-apocalyptic scenarios: a world ravaged by a fungal outbreak that turns humans into terrifying, zombie-like creatures. The virus in the game, known as the Cordyceps Brain Infection (CBI), is a creative twist on a very real phenomenon found in nature: the Cordyceps fungus. In the game, it jumps from insects to humans, sparking the downfall of civilization. But how much of this scenario is based on actual science, and could it ever happen in real life?

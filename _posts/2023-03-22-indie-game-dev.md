@@ -4,6 +4,7 @@ excerpt: 'Indie game development is a thriving space where creativity knows no b
 tags: ['videogames', 'software']
 coverImage: '/images/wonderlane-FkHpejze0C4-unsplash.jpg'
 imageCaption: 'Photo by <a href="https://unsplash.com/@wonderlane?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Wonderlane</a> on <a href="https://unsplash.com/photos/man-wearing-gray-long-sleeved-shirt-and-blue-denim-jeans-walking-on-beige-area-rug-FkHpejze0C4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
+imageAlt: 'Office space with game developers'
 ---
 
 Indie game development has become one of the most exciting and innovative spaces in the gaming industry. Free from the pressures and constraints of large publishers, indie developers have the creative freedom to experiment, tell unique stories, and design groundbreaking gameplay experiences. Whether it’s a retro platformer with a twist or a deeply emotional narrative-driven game, the indie scene is full of passion, risk-taking, and originality.

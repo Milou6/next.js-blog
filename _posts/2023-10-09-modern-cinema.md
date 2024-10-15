@@ -4,6 +4,7 @@ excerpt: 'Modern cinematography has come a long way, blending traditional techni
 tags: ['cinema']
 coverImage: '/images/madai-MznG0RnHa0c-unsplash.jpg'
 imageCaption: 'Photo by <a href="https://unsplash.com/@flower28?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Madai</a> on <a href="https://unsplash.com/photos/the-chicago-theatre-marquee-is-lit-up-at-night-MznG0RnHa0c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
+imageAlt: 'Facade of a Chicago cinema'
 ---
 
 In the world of film, **cinematography** is the language of visual storytelling. It’s how directors and cinematographers manipulate light, composition, movement, and color to evoke emotion and build the narrative. While the fundamentals of cinematography have remained the same, modern techniques and digital technology have completely reshaped how we create and experience films today.

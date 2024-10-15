@@ -4,6 +4,7 @@ excerpt: 'Third-wave coffee isn’t just about crafting the perfect cup—it’s
 tags: ['coffee', 'environment']
 coverImage: '/images/shelby-murphy-figueroa-w_cGFf76xeA-unsplash.jpg'
 imageCaption: 'Photo by <a href="https://unsplash.com/@shelbyfigueroa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Shelby Murphy Figueroa</a> on <a href="https://unsplash.com/photos/a-man-picking-coffee-beans-from-a-tree-w_cGFf76xeA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
+imageAlt: 'Man picking coffee cherries'
 ---
 
 The third-wave coffee movement has transformed how we think about coffee, focusing not only on the artistry behind brewing but also on sustainability, ethical sourcing, and the ecological impact of every cup. The rise of specialty coffee has brought with it a deeper awareness of the environment, where everything from how coffee is grown to how it's brewed plays a role in reducing environmental footprints.
