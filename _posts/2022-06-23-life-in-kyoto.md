@@ -1,7 +1,7 @@
 ---
 title: 'Living in Kyoto: A Blend of Tradition and Modernity'
 excerpt: 'Kyoto, Japan’s cultural heart, offers a unique blend of ancient traditions and modern living. From its historic temples and tranquil gardens to its thriving art scene and bustling local markets, life in Kyoto is an experience that balances the old and the new.'
-tags: ['japan', 'travel']
+tags: ['Japan', 'travel']
 coverImage: '/images/shun-idota-XavWC3VZaGY-unsplash.jpg'
 imageCaption: 'Photo by <a href="https://unsplash.com/@itzshunnn?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">shun idota</a> on <a href="https://unsplash.com/photos/a-tall-red-building-sitting-on-top-of-a-lush-green-hillside-XavWC3VZaGY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
 imageAlt: 'A view of Fushimi Inari Shrine and the city behind it'

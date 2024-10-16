@@ -73,3 +73,21 @@ button {
   padding: 0px 10px;
   border-radius: 10px;
 }
+
+article {
+  max-width: min(65ch, 100%);
+  margin: auto;
+}
+
+p > code {
+  background-color: var(--secondaryContainer);
+  color: var(--onSecondaryContainer);
+  padding: 2px;
+  border-radius: 3px;
+}
+
+// transition colors for ColorPicker
+* {
+  transition: color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}

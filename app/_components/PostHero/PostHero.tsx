@@ -17,8 +17,8 @@ export default function PostHero({ post }: { post: Post }) {
       <div className="imgContainer">
         <Image
           src={post.coverImage}
-          fill
           priority
+          fill
           sizes="100vw"
           style={{ objectFit: 'cover' }}
           alt={post.imageAlt}

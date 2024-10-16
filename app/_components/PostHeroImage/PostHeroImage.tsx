@@ -21,7 +21,7 @@ export default function PostHeroImage({
 
   return (
     <figure className={styles.heroImage}>
-      <Image src={imgSrc} fill sizes="100vw" style={{ objectFit: 'cover' }} alt={imgAlt} />
+      <Image src={imgSrc} priority fill sizes="100vw" style={{ objectFit: 'cover' }} alt={imgAlt} />
 
       <figcaption>
         {showInfo && <span className="label-small" dangerouslySetInnerHTML={{ __html: imgCaption }}></span>}

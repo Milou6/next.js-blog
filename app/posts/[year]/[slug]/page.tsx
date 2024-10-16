@@ -1,7 +1,6 @@
 import markdownToHtml from '@/lib/markdownToHtml';
 import { notFound } from 'next/navigation';
-import { getAllPosts, getLatestPosts, getPostByYearAndSlug } from '@/lib/api';
-// import { Post } from '@/interfaces/post';
+import { getAllPosts, getPostByYearAndSlug } from '@/lib/api';
 
 import styles from './styles.module.scss';
 import PostHeroImage from '@/app/_components/PostHeroImage/PostHeroImage';

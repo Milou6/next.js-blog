@@ -1,0 +1,17 @@
+@use '/app/css/breakpoints' as *;
+@use '/app/css/variables' as *;
+
+.article :global {
+  .headings-comparison {
+    display: flex;
+    justify-content: space-around;
+
+    h1 {
+      display: inline;
+      margin-top: 0;
+      &.default-spacing {
+        letter-spacing: normal;
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@ export default function Footer() {
         Made with 💪 by&nbsp;
         <span>
           <a className="link label-medium" href="https://github.com/Milou6" target="_blank">
-            Emile Haas
+            Milou6
           </a>
         </span>
       </div>

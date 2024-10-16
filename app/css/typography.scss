@@ -108,17 +108,18 @@ body {
 }
 
 p {
-  // max-width: 65ch;
-  max-width: calc($body-font-size * 35);
+  max-width: 65ch;
+  // max-width: calc($body-font-size * 35);
   margin: calc($line-height-body * $body-font-size) 0;
+}
+ul,
+ol {
+  max-width: 65ch;
 }
 
 a {
   @include typescales.label-large;
   font-weight: 700;
-}
-
-a {
   border-radius: $border-radius;
   text-decoration: none;
   user-select: none;
