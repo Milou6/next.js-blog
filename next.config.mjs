@@ -6,9 +6,14 @@ const nextConfig = {
         source: '/',
         destination: '/blog',
         permanent: true,
-      }
-    ]
+      },
+      {
+        source: '/blog/page/1',
+        destination: '/blog',
+        permanent: true,
+      },
+    ];
   }
-}
+};
 
-export default nextConfig
+export default nextConfig;

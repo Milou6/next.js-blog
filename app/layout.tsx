@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-
 import Header from './_components/Header/Header';
 import Footer from './_components/Footer/Footer';
 import ColorPicker from './_components/ColorPicker/ColorPicker';

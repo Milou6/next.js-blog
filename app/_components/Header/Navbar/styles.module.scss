@@ -1,5 +1,12 @@
-.navbar {
+.navbar :global {
   display: flex;
   align-items: center;
   gap: 20px;
+
+  a {
+    width: 70px;
+    padding: 5px 0;
+    border-radius: 15px;
+    text-align: center;
+  }
 }

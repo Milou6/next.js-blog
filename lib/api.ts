@@ -27,15 +27,15 @@ export async function getLatestPosts({ page = undefined }: { page: string | unde
   return await Promise.all(posts);
 }
 
-// export function getAllPosts(): Post[] {
-//   const fileNames = fs.readdirSync(POSTS_DIR);
-//   fileNames.reverse();
+export async function getAllPosts(): Promise<Post[]> {
+  const fileNames = fs.readdirSync(POSTS_DIR);
+  fileNames.reverse();
 
-//   const posts: Post[] = fileNames.map((slug) => getPostByFileName(slug));
-//   return posts;
-// }
+  const posts: Promise<Post>[] = fileNames.map(async (filename) => getPostByFileName(filename));
+  return await Promise.all(posts);
+}
 
-export async function getPostByYearAndSlug(year: string, slug: string) {
+export async function getPostByYearAndSlug(year: string, slug: string): Promise<Post> {
   const fileNames = fs.readdirSync(POSTS_DIR).map((file) => file.replace(/\.md$/, ''));
 
   const matchingFile = fileNames.find((file) => file.endsWith(slug) && file.startsWith(year));
@@ -46,7 +46,7 @@ export async function getPostByYearAndSlug(year: string, slug: string) {
   return await getPostByFileName(matchingFile);
 }
 
-export async function getPostByFileName(filename: string) {
+export async function getPostByFileName(filename: string): Promise<Post> {
   const postFileName = filename.replace(/\.md$/, '');
   const postDate = postFileName.slice(0, 10); // YYYY-MM-DD
   const postSlug = postFileName.slice(11); // my-blog-post
