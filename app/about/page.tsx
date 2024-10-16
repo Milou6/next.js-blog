@@ -36,8 +36,8 @@ export default function BlogPage() {
       <h3>Rendering</h3>
 
       <p>
-        To fully take advantage of Next.js' capabilities, I've chosen Static Site Generation (<b>SSG</b>) to pre-render
-        all possible dynamic blog routes at build time. This means that all dynamic routes like{' '}
+        To fully take advantage of Next.js&apos; capabilities, I&apos;ve chosen Static Site Generation (<b>SSG</b>) to
+        pre-render all possible dynamic blog routes at build time. This means that all dynamic routes like{' '}
         <code>posts/[year]/[slug]</code> implement the <code>generateStaticParams()</code> function, which runs during
         the build step to generate all possible parameter combinations and their associated HTML page.
       </p>
@@ -62,21 +62,21 @@ export default function BlogPage() {
         <a href="https://www.figma.com/community/file/1035203688168086460" target="_blank" rel="noopener noreferrer">
           Figma M3 Design Kit
         </a>{' '}
-        to build a color scheme, but I've found it a bit clunky to use : the plugin takes a long time to update all
-        design files every time you switch the source color, and it doesn't have an option to choose between all the
-        different scheme types.
+        to build a color scheme, but I&apos;ve found it a bit clunky to use : the plugin takes a long time to update all
+        design files every time you switch the source color, and it doesn&apos;t have an option to choose between all
+        the different scheme types.
       </p>
 
       <p>
-        By using the library directly, I'm able to choose my preferred scheme type (<code>SchemeFidelity</code> on this
-        blog) and dynamically update the blog's CSS variables for different color roles (<code>--primary</code>,{' '}
-        <code>--onPrimary</code>, <code>--secondary</code>, etc...).
+        By using the library directly, I&apos;m able to choose my preferred scheme type (<code>SchemeFidelity</code> on
+        this blog) and dynamically update the blog&apos;s CSS variables for different color roles (
+        <code>--primary</code>, <code>--onPrimary</code>, <code>--secondary</code>, etc...).
       </p>
 
       <p>
-        The <code>&lt;ColorPicker&gt;</code> component also saves the user's color preference to localStorage. To avoid
-        writing to storage too often, I've implemented a <code>debouncedSaveColor()</code> method that makes sure the
-        component only writes to it at most once per second.
+        The <code>&lt;ColorPicker&gt;</code> component also saves the user&apos;s color preference to localStorage. To
+        avoid writing to storage too often, I&apos;ve implemented a <code>debouncedSaveColor()</code> method that makes
+        sure the component only writes to it at most once per second.
       </p>
 
       <h3>Typography</h3>
@@ -93,7 +93,7 @@ export default function BlogPage() {
       </div>
 
       <p>
-        I've created a simple system to automatically generate type scales for typography tokens. It uses a default{' '}
+        I&apos;ve created a simple system to automatically generate type scales for typography tokens. It uses a default{' '}
         <code>$scale-ratio: 1.125</code> (Major second type scale,{' '}
         <a
           href="https://m3.material.io/styles/typography/type-scale-tokens#2a57c8f0-d45b-470a-984f-eb4f89f425fa"
