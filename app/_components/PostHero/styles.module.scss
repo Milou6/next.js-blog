@@ -1,5 +1,6 @@
 @use '/app/css/variables' as *;
 @use '/app/css/breakpoints' as *;
+@use '/app/css/utils' as *;
 
 .postHero :global {
   width: 100%;
@@ -12,6 +13,7 @@
     height: 350px;
     @media screen and (max-width: $bp-mobile) {
       height: 250px;
+      @include center-full-width;
     }
   }
 

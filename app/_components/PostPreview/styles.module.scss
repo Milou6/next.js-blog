@@ -1,9 +1,16 @@
+@use '/app/css/breakpoints' as *;
+@use '/app/css/utils' as *;
+
 .postPreview :global {
   .img-container {
     position: relative;
     width: 100%;
     height: 190px;
     cursor: pointer;
+
+    @media screen and (max-width: $bp-mobile) {
+      @include center-full-width;
+    }
   }
 
   .titleContainer {

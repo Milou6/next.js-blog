@@ -30,21 +30,7 @@ export default function BlogPage() {
         >
           Material Dynamic color scheme
         </a>
-        .
-      </p>
-
-      <h3>Rendering</h3>
-
-      <p>
-        To fully take advantage of Next.js&apos; capabilities, I&apos;ve chosen Static Site Generation (<b>SSG</b>) to
-        pre-render all possible dynamic blog routes at build time. This means that all dynamic routes like{' '}
-        <code>posts/[year]/[slug]</code> implement the <code>generateStaticParams()</code> function, which runs during
-        the build step to generate all possible parameter combinations and their associated HTML page.
-      </p>
-
-      <p>
-        This is appropriate for a blog since the content is mostly static (blog markdown files are not updated that
-        often).
+        . Post contents were auto-generated and are just meant as an example (LLM opinions not my own!).
       </p>
 
       <h3>Color Scheme</h3>
@@ -62,7 +48,7 @@ export default function BlogPage() {
         <a href="https://www.figma.com/community/file/1035203688168086460" target="_blank" rel="noopener noreferrer">
           Figma M3 Design Kit
         </a>{' '}
-        to build a color scheme, but I&apos;ve found it a bit clunky to use : the plugin takes a long time to update all
+        to build a color scheme, but I&apos;ve found it a bit clunky to use: the plugin takes a long time to update all
         design files every time you switch the source color, and it doesn&apos;t have an option to choose between all
         the different scheme types.
       </p>
@@ -77,6 +63,50 @@ export default function BlogPage() {
         The <code>&lt;ColorPicker&gt;</code> component also saves the user&apos;s color preference to localStorage. To
         avoid writing to storage too often, I&apos;ve implemented a <code>debouncedSaveColor()</code> method that makes
         sure the component only writes to it at most once per second.
+      </p>
+
+      <h3>Rendering</h3>
+
+      <p>
+        To fully take advantage of Next.js&apos; capabilities, I&apos;ve chosen Static Site Generation (<b>SSG</b>) to
+        pre-render all possible blog routes at build time. This means that all dynamic routes like{' '}
+        <code>posts/[year]/[slug]</code> implement the <code>generateStaticParams()</code> function, which runs during
+        the build step to generate all possible parameter combinations and their associated HTML page. This is
+        appropriate for a blog since the content is mostly static: blog markdown files are not updated that often.
+      </p>
+
+      <p>
+        One drawback of this approach is that user preferences (such as their favorite color) are not known at build
+        time, which creates a{' '}
+        <a href="https://en.wikipedia.org/wiki/Flash_of_unstyled_content" target="_blank" rel="noopener noreferrer">
+          FOUC
+        </a>{' '}
+        (in our case, Flash Of <i>Unwanted Color</i> when the user loads the blog). A naive fix to this problem would be
+        to implement a loading screen while the saved color is fetched on the client-side, but this negates the faster
+        First Paint that SSG gives us. Josh Comeau has a very good explanation of this in his{' '}
+        <a
+          href="https://www.joshwcomeau.com/react/server-components/#a-quick-primer-on-server-side-rendering-1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          primer on Server Side Rendering
+        </a>
+        .
+      </p>
+
+      <p>
+        Another solution would be to use cookies, but this would make the framework automatically switch to Dynamic
+        Rendering (instead of our preferred Static Rendering). The real issue, of course, is that the server
+        doesn&apos;t have access to user preferences saved client-side. Some other solutions involve injecting a{' '}
+        <code>&lt;script&gt;</code> directly into the <code>next/head</code>{' '}
+        <a
+          href="https://github.com/pacocoursey/next-themes?tab=readme-ov-file#the-flash"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          as described here
+        </a>
+        .
       </p>
 
       <h3>Typography</h3>
@@ -102,7 +132,7 @@ export default function BlogPage() {
         >
           as recommended by Material
         </a>
-        ) with a body font size of 16px to create a cohesive set of font sizes :
+        ) with a body font size of 16px to create a cohesive set of font sizes:
       </p>
 
       <SyntaxHighlighter language="scss" style={atomOneDarkReasonable}>
@@ -110,7 +140,7 @@ export default function BlogPage() {
       </SyntaxHighlighter>
 
       <p>
-        This allows to very easily adjust typography when switching fonts, by only having to modify a handful of
+        This makes it very easy to adjust typography when switching fonts, by only having to modify a handful of
         variables.
       </p>
     </article>

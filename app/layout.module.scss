@@ -3,10 +3,10 @@
 
 .body :global {
   main {
-    @media screen and (max-width: $bp-mobile) {
+    @media screen and (width <= $bp-mobile) {
       margin: $body-margin-mobile;
     }
-    @media screen and (max-width: $bp-tablet) {
+    @media screen and ($bp-mobile <= width <= $bp-tablet) {
       margin: $body-margin-tablet;
     }
     margin: $body-margin-desktop;
