@@ -24,8 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={AROneSans.className}>
+    <html lang="en" suppressHydrationWarning className={AROneSans.className}>
       <head>
+        <script type="text/javascript" src="bundle.js"></script>
+
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=info,palette&display=block"
           rel="stylesheet"

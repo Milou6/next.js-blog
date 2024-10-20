@@ -8,6 +8,8 @@ import {
 } from '@material/material-color-utilities';
 import { RgbColor } from 'react-colorful';
 
+export const COLOR_PICKER_KEY = 'color-picker';
+
 export function rgbToHct(rgbColor: { r: number; g: number; b: number }): Hct {
   const argb = argbFromRgb(rgbColor.r, rgbColor.g, rgbColor.b);
   return Hct.fromInt(argb);

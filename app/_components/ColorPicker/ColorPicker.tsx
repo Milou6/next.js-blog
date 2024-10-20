@@ -3,15 +3,18 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import styles from './styles.module.scss';
 import { RgbColor, RgbColorPicker } from 'react-colorful';
-import { updateCSSColorSchemeWith } from '@/lib/colors-service';
+import { COLOR_PICKER_KEY, updateCSSColorSchemeWith } from '@/lib/colors-service';
 import { debounce } from '@/lib/utils';
 import { useClickAway } from '@/app/hooks/useClickAway';
-
-const COLOR_PICKER_KEY = 'color-picker';
 
 export default function ColorPicker({ className = undefined }: { className?: string | undefined }) {
   const [rgbColor, setRgbColor] = useState({ r: 98, g: 209, b: 239 });
   const [showColorPicker, setShowColorPicker] = useState(false);
+
+  useEffect(() => {
+    const localStorageColor = window.localStorage.getItem(COLOR_PICKER_KEY);
+    setRgbColor(localStorageColor ? JSON.parse(localStorageColor) : { r: 98, g: 209, b: 239 });
+  }, []);
 
   const saveColor = useCallback((newColor: RgbColor) => {
     if (window) {
@@ -27,11 +30,6 @@ export default function ColorPicker({ className = undefined }: { className?: str
     setRgbColor(newColor);
     debouncedSaveColor(newColor); // avoid accessing localStorage too often
   }
-
-  useEffect(() => {
-    const localStorageColor = window.localStorage.getItem(COLOR_PICKER_KEY);
-    setRgbColor(localStorageColor ? JSON.parse(localStorageColor) : { r: 98, g: 209, b: 239 });
-  }, []);
 
   useEffect(() => {
     updateCSSColorSchemeWith(rgbColor);
