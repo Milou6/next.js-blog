@@ -31,7 +31,7 @@ export default function PostHero({ post }: { post: Post }) {
           {post.title}
         </h2>
         <span className="postDetails">
-          <span className="postDate label-medium on-surface-variant">
+          <span className="postDate label-medium on-surface-variant" suppressHydrationWarning>
             {new Date(post.date).toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
           </span>
 

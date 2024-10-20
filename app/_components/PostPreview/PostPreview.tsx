@@ -29,7 +29,7 @@ export default function PostPreview({ post }: { post: Post }) {
           {post.title}
         </h6>
         <span className="postDetails">
-          <span className="postDate label-medium on-surface-variant">
+          <span className="postDate label-medium on-surface-variant" suppressHydrationWarning>
             {new Date(post.date).toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
           </span>
 

@@ -27,6 +27,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning className={AROneSans.className}>
+      {/* <html lang="en" className={AROneSans.className}> */}
       <head>
         <script type="text/javascript" src="bundle.js"></script>
 
