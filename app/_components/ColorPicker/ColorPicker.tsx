@@ -6,15 +6,17 @@ import { RgbColor, RgbColorPicker } from 'react-colorful';
 import { COLOR_PICKER_KEY, updateCSSColorSchemeWith } from '@/lib/colors-service';
 import { debounce } from '@/lib/utils';
 import { useClickAway } from '@/app/hooks/useClickAway';
+import { useStickyState } from '@/app/hooks/useStickyState';
 
 export default function ColorPicker({ className = undefined }: { className?: string | undefined }) {
-  const [rgbColor, setRgbColor] = useState({ r: 98, g: 209, b: 239 });
+  // const [rgbColor, setRgbColor] = useState({ r: 98, g: 209, b: 239 });
+  const [rgbColor, setRgbColor] = useStickyState({ r: 98, g: 209, b: 239 }, COLOR_PICKER_KEY);
   const [showColorPicker, setShowColorPicker] = useState(false);
 
   useEffect(() => {
     const localStorageColor = window.localStorage.getItem(COLOR_PICKER_KEY);
     setRgbColor(localStorageColor ? JSON.parse(localStorageColor) : { r: 98, g: 209, b: 239 });
-  }, []);
+  }, [setRgbColor]);
 
   const saveColor = useCallback((newColor: RgbColor) => {
     if (window) {

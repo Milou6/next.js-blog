@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import Header from './_components/Header/Header';
 import Footer from './_components/Footer/Footer';
-import ColorPicker from './_components/ColorPicker/ColorPicker';
 
 import './css/globals.scss';
 import styles from './layout.module.scss';
 import { AR_One_Sans } from 'next/font/google';
+import dynamic from 'next/dynamic';
 
 const AROneSans = AR_One_Sans({
   subsets: ['latin'],
@@ -23,6 +23,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const ColorPickerDynamic = dynamic(() => import('@/app/_components/ColorPicker/ColorPicker'), { ssr: false });
+
   return (
     <html lang="en" suppressHydrationWarning className={AROneSans.className}>
       <head>
@@ -38,7 +40,7 @@ export default function RootLayout({
         <Header></Header>
 
         <div className="fabContainer">
-          <ColorPicker className="colorPicker"></ColorPicker>
+          <ColorPickerDynamic className="colorPicker"></ColorPickerDynamic>
         </div>
 
         <main>{children}</main>
