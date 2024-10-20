@@ -83,7 +83,7 @@ export default function BlogPage() {
         </a>{' '}
         (in our case, Flash Of <i>Unwanted Color</i> when the user loads the blog). A naive fix to this problem would be
         to implement a loading screen while the saved color is fetched on the client-side, but this negates the faster
-        First Paint that SSG gives us. Josh Comeau has a very good explanation of this in his{' '}
+        First Paint that SSG gives us. Josh Comeau has a very good explanation of different rendering strategies on his{' '}
         <a
           href="https://www.joshwcomeau.com/react/server-components/#a-quick-primer-on-server-side-rendering-1"
           target="_blank"
@@ -97,16 +97,15 @@ export default function BlogPage() {
       <p>
         Another solution would be to use cookies, but this would make the framework automatically switch to Dynamic
         Rendering (instead of our preferred Static Rendering). The real issue, of course, is that the server
-        doesn&apos;t have access to user preferences saved client-side. Some other solutions involve injecting a{' '}
-        <code>&lt;script&gt;</code> directly into the <code>next/head</code>{' '}
-        <a
-          href="https://github.com/pacocoursey/next-themes?tab=readme-ov-file#the-flash"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          as described here
-        </a>
-        .
+        doesn&apos;t have access to user preferences saved client-side.
+      </p>
+
+      <p>
+        The solution I chose was to directly inject a <code>&lt;script&gt;</code> tag in the HTML head of the global
+        layout. The script does need access to the Material <code>SchemeFidelity</code> class, so I had to bundle it
+        into a minified js file with webpack, but the resulting bundle is not very big at 54 kB (16kB transferred), and
+        it is cached by the browser. The script also only needs to run once, when the first blog page is loaded. The
+        result is great: <i>FOUC is completely gone!</i>
       </p>
 
       <h3>Typography</h3>
